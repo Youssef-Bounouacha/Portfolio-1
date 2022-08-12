@@ -2,10 +2,14 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --primary-color:white;
+    --secondary-color: #212121;
+}
 .page{
     height: 100;
     width: 100;
-    background: white;
+    background: var(--primary-color);
     font-family: sans-serif;
     position: relative ;
 }
@@ -34,34 +38,41 @@ nav ul li{
 }
 nav ul li a{
     text-decoration: none;
-    color: #606163;
+    color: var(--secondary-color);
     
 }
 nav ul li a:hover{
     color: #ff4221d2;
-    
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+#icon{
+    width: 30px;
+    cursor: pointer;
 }
 .info{
-    margin-left: 10% ;
+    margin-left: 8% ;
     margin-top: 15%;
 }
 .info h1{
     font-size: 60px;
-    color: #212121;
+    color: var(--secondary-color);
     margin-bottom: 20px;
 }
 .info p{
-    color: black;
+    color: var(--secondary-color);
     line-height: 22px;
 }
 span{
     color: #ff4221d2;
 }
 .info a{
-    background: black;
+    background: var(--secondary-color);
     padding: 10px 18px;
     text-decoration: none;
-    color: white;
+    color: var(--primary-color);
     display: inline-block;
     margin: 30px 0;
     border-radius: 5px;
@@ -83,6 +94,34 @@ span{
     height: 100%;
     position: absolute;
     left: 50%;
-    bottom: 30%;
+    bottom: -15%;
     transform: translateX(-50%);
+    transition: left 1s, bottom 1s;   
+}
+.img-move .gmypic{
+    height: 1100px;
+}
+.img-move .mypic{
+    height: 1000px;
+    margin-bottom: 9%;
+}
+.img-move:hover .gmypic{
+    bottom: 1%;
+}
+.img-move:hover .mypic{
+left: 54%;
+}
+.socials{
+    margin-left: 8%;
+    margin-top: 400px;
+   
+}
+.socials a{
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin-right: 20px;
+    transition: 1s;
+}
+.socials a:hover{
+    color: #ff4221d2 ;
 }
