@@ -11,6 +11,10 @@
     
 </head>
 <body>
+    <div class="mode-tog"></div>
+    <div class="container">
+        <div class="dark-mode"></div>
+    </div>
    <div class="page">
    <nav>
        <img src="IMAGES/logo.png" class="logo">
@@ -20,22 +24,32 @@
         <li><a href="">PORTFOLIO</a></li>
         <li><a href="">HIRE ME</a></li>
     </ul>
-    <img src="IMAGES/moon.png" id="icon"> 
+
    </nav>
-   
- </div>
+</div>   
+
 <div class="info">
     <h1>I'm <span>Bounouacha Youssef</span></h1>
     <p>This is my portfolio, it's a representation of all that i've learned and accomplished as a web<br>devlopement engineer</p>
     <a href="">Download CV</a>
-   </div>   
+   </div>
+ 
    <div class="img-move">
     <img src="IMAGES/backg.png" class="gmypic">
     <img src="IMAGES/me.png" class="mypic">
    </div>
+
    <div class="socials">
     <a href=""><i class="fa-solid fa-envelope"></i></a>
     <a href=""><i class="fab fa-linkedin"></i></a>
    </div>
+<script>
+   let modeToggle = document.querySelector('.mode-tog');
+   let darkmode = document.querySelector('.dark-mode'); 
+   modeToggle.addEventListener('click', () =>{
+    darkmode.classList.toggle('active');
+    modeToggle.classList.toggle('active');
+   })
+</script>
 </body>
 </html> 
