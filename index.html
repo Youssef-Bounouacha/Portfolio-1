@@ -24,14 +24,15 @@
         <li><a href="">PORTFOLIO</a></li>
         <li><a href="">HIRE ME</a></li>
     </ul>
-    
+
    </nav>
 </div>   
 
 <div class="info">
-    <h1>I'm <span>Bounouacha Youssef</span></h1>
+    <h1 class="a">I'm <span>Bounouacha Youssef</span></h1>
     <p>This is my portfolio, it's a representation of all that i've learned and accomplished as a web<br>devlopement engineer</p>
     <a href="">Download CV</a>
+
    </div>
  
    <div class="img-move">
@@ -44,12 +45,29 @@
     <a href=""><i class="fab fa-linkedin"></i></a>
    </div>
 <script>
+   const span = document.querySelector(".dd");
    let modeToggle = document.querySelector('.mode-tog');
+   const classeModeToggle = modeToggle.classList;
    let darkmode = document.querySelector('.dark-mode'); 
+   const classeDarkmode = darkmode.classList;
    modeToggle.addEventListener('click', () =>{
-    darkmode.classList.toggle('active');
-    modeToggle.classList.toggle('active');
+    
+   const resultDarkmode= darkmode.classList.toggle('active');
+   const resultModeToggle= modeToggle.classList.toggle('active');
+
+   /* if (resultDarkmode) {
+    span.textContent = `resultDarkmode 'active' added; classList is now "${resultDarkmode}".`;
+  } else {
+    span.textContent = `resultDarkmode'active' removed; classList is now "${resultDarkmode}".`;
+  }*/
+
+  if (resultModeToggle) {
+    span.textContent = `resultModeToggle'active' added; classList is now "${resultModeToggle}".`;
+  } else {
+    span.textContent = `resultModeToggle'active' removed; classList is now "${resultModeToggle}".`;
+  }
    })
+
 </script>
 </body>
 </html> 
